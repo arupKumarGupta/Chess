@@ -1,0 +1,51 @@
+$backgroundColor: rgb(227, 226, 226);
+$dark: rgb(64, 104, 29);
+$light: rgb(222, 234, 100);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100vh;
+    background: $backgroundColor;
+}
+.container {
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    #chess-board {
+        border-radius: 5px;
+        border: 20px solid rgba(57, 67, 27, 0.674);
+        width: 600px;
+        height: 600px;
+        .rank {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            .cell {
+                width: 70px;
+                height: 70px;
+                overflow: hidden;
+                display: grid;
+                place-items: center;
+                &.LIGHT {
+                    background: $light;
+                    &.piece {
+                    }
+                }
+                &.DARK {
+                    background: $dark;
+                }
+                &.piece {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

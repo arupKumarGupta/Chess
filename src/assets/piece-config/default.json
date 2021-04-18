@@ -1,0 +1,259 @@
+[
+    {
+        "name": "wr",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 1
+        }
+    },
+    {
+        "name": "wn",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 2
+        }
+    },
+    {
+        "name": "wb",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 3
+        }
+    },
+    {
+        "name": "wq",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 4
+        }
+    },
+    {
+        "name": "wk",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 5
+        }
+    },
+    {
+        "name": "wb",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 6
+        }
+    },
+    {
+        "name": "wn",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 7
+        }
+    },
+    {
+        "name": "wr",
+        "type": "LIGHT",
+        "position": {
+            "x": 8,
+            "y": 8
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 1
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 2
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 3
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 4
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 5
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 6
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 7
+        }
+    },
+    {
+        "name": "wp",
+        "type": "LIGHT",
+        "position": {
+            "x": 7,
+            "y": 8
+        }
+    },
+
+    {
+        "name": "br",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 1
+        }
+    },
+    {
+        "name": "bn",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 2
+        }
+    },
+    {
+        "name": "bb",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 3
+        }
+    },
+    {
+        "name": "bq",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 4
+        }
+    },
+    {
+        "name": "bk",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 5
+        }
+    },
+    {
+        "name": "bb",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 6
+        }
+    },
+    {
+        "name": "bn",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 7
+        }
+    },
+    {
+        "name": "br",
+        "type": "DARK",
+        "position": {
+            "x": 1,
+            "y": 8
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 1
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 2
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 3
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 4
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 5
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 6
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 7
+        }
+    },
+    {
+        "name": "bp",
+        "type": "DARK",
+        "position": {
+            "x": 2,
+            "y": 8
+        }
+    }
+]
