@@ -1,6 +1,6 @@
 $backgroundColor: rgb(227, 226, 226);
 $dark: rgb(64, 104, 29);
-$light: rgb(222, 234, 100);
+$light: rgb(233, 239, 174);
 $selected: rgb(164, 71, 71);
 $reachable: rgba(35, 32, 32, 0.421);
 * {
@@ -35,6 +35,7 @@ body {
                 height: 70px;
                 position: relative;
                 .piece {
+                    z-index: 100;
                     position: absolute;
                     left: 50%;
                     top: 50%;
@@ -50,6 +51,7 @@ body {
                     background: $selected;
                 }
                 &.reachable::after {
+                    z-index: 0;
                     content: '';
                     position: absolute;
                     width: 20px;

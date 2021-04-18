@@ -57,4 +57,8 @@ export default class Pawn extends Piece {
         this.possibleFirstMove = this.isDark() ? x === 2 : x === 7;
         return this.possibleFirstMove;
     }
+    move(destination) {
+        super.move(destination);
+        this.possibleFirstMove = false;
+    }
 }

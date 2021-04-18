@@ -2,6 +2,8 @@ import { cellReachable, pieceClass } from './constant';
 import { RenderError } from './Errors/RenderError';
 import Game from './Game';
 import Piece from './pieces/Piece';
+import { getGridLocationFromHtmlCell } from './util';
+
 /**
  * @description renders chess grid on webpage
  * @param {HTMLNode} chessBoard | ref to HTML node
@@ -38,16 +40,48 @@ export function boardRenderer(chessBoard, gameInstance) {
  * @param {Game} gameInstance
  * @param {Piece} selectedPiece
  */
-export const updateReachableLocations = (
-    chessBoard,
-    gameInstance,
-    selectedPiece
-) => {
+export const updateReachableLocations = (chessBoard, selectedPiece) => {
     const reachableLocations = selectedPiece.getReachableLocations();
     for (const { x, y } of reachableLocations) {
         const htmlCells = chessBoard.querySelectorAll(
             `.cell[data-gridlocation="${x},${y}"]`
         );
-        htmlCells.forEach(node => node.classList.add(cellReachable) );
+        htmlCells.forEach((node) => {
+            node.classList.add(cellReachable);
+            node.setAttribute(
+                'data-reachablefrom',
+                `${selectedPiece.position.x},${selectedPiece.position.y}`
+            );
+        });
     }
+};
+
+export const makeAMove = (chessBoard, gameInstance, destinationCell) => {
+    const [originX, originY] = getGridLocationFromHtmlCell(
+        destinationCell,
+        'reachablefrom'
+    );
+    const [destX, destY] = getGridLocationFromHtmlCell(
+        destinationCell,
+        'gridlocation'
+    );
+    const grid = gameInstance.getBoard().getGrid();
+    const originPiece = grid[originX][originY].getPiece();
+    const killedPiece = originPiece.move({ x: destX, y: destY });
+    console.log(killedPiece);
+    const destCell = chessBoard.querySelector(
+        `.cell[data-gridlocation="${destX},${destY}"]`
+    );
+    const originCell = chessBoard.querySelector(
+        `.cell[data-gridlocation="${originX},${originY}"]`
+    );
+    const killedDomElem = destCell.querySelector('.piece');
+    if (killedDomElem) {
+        destinationCell.removeChild(killedDomElem);
+    }
+    const originPieceHtmlNode = originCell.removeChild(
+        originCell.querySelector('.piece')
+    );
+    originPieceHtmlNode.setAttribute('data-gridlocation', `${destX},${destY}`);
+    destinationCell.appendChild(originPieceHtmlNode);
 };

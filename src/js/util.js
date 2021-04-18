@@ -8,8 +8,16 @@ export const wrappedEvent = (fn, ...data) => {
 };
 
 export const isValidCell = (grid, i,j) => {
-    if(i < 1 || i > grid.length || j < 1 || j > grid.length) {
+    if(i < 1 || i >= grid.length || j < 1 || j >= grid.length) {
         return false;
     }
     return true;
+}
+
+export const getGridLocationFromHtmlCell = (htmlNode, propName) => {
+    const prop = htmlNode.dataset[propName];
+    if(prop) {
+        return prop.split(',').map(v=>+v);
+    }
+    return [];
 }
