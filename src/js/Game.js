@@ -39,14 +39,6 @@ export default class Game {
     return this.pieces;
   }
 
-  /**
-   * @description gets Piece Object
-   * @param {pieceName} pieceKey // key from the piece object
-   * @returns {PieceObject}
-   */
-  getPiece(pieceKey) {
-    return this.pieces[pieceKey];
-  }
 
   /**
    * @description get a board cell
@@ -61,7 +53,7 @@ export default class Game {
   loadPieces(pieceConfig = defaultPieceConfig) {
     const pieces = [];
     for(const conf of pieceConfig) {
-      const piece = new PIECES[conf.name](conf.name, conf.position, conf.type);
+      const piece = new PIECES[conf.name](conf.name, conf.position, conf.type, this.board.getGrid());
       piece.setSvg();
       pieces.push(piece);
     }

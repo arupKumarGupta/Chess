@@ -34,4 +34,5 @@ export default class Board {
             this.grid[x][y].setPiece(piece);
         }
     }
+
 }

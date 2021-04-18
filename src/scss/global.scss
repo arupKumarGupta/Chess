@@ -1,6 +1,8 @@
 $backgroundColor: rgb(227, 226, 226);
 $dark: rgb(64, 104, 29);
 $light: rgb(222, 234, 100);
+$selected: rgb(164, 71, 71);
+$reachable: rgba(35, 32, 32, 0.421);
 * {
     margin: 0;
     padding: 0;
@@ -31,19 +33,32 @@ body {
             .cell {
                 width: 70px;
                 height: 70px;
-                overflow: hidden;
-                display: grid;
-                place-items: center;
+                position: relative;
+                .piece {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
                 &.LIGHT {
                     background: $light;
-                    &.piece {
-                    }
                 }
                 &.DARK {
                     background: $dark;
                 }
-                &.piece {
-                    font-size: 40px;
+                &.selected {
+                    background: $selected;
+                }
+                &.reachable::after {
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: $reachable;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
         }

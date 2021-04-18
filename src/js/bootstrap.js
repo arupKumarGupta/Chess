@@ -1,17 +1,13 @@
+import { onPieceSelected } from './boardEvents';
 import Game from './Game';
 import { boardRenderer } from './renderer';
-
+import { wrappedEvent } from './util';
 const gameInstance = new Game();
 gameInstance.init();
-function ready () {
-
+function ready() {
     const chessBoard = document.querySelector('#chess-board');
     boardRenderer(chessBoard, gameInstance);
-    document.onmousedown = onPieceDrag;
+    chessBoard.addEventListener('click', wrappedEvent(onPieceSelected, chessBoard, gameInstance));
 }
 
-function onPieceDrag(event) {
-    const target = event.target;
-    console.log(target);
-}
 window.onload = ready;
