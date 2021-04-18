@@ -1,15 +1,9 @@
-# 🚀 Welcome to your new awesome project!
+# ♔ Chess using Vanilla Javascript! ♔
 
-This project has been created using **webpack-cli**, you can now run
+This Chess project is current WIP.
+It is created with vanilla javascript (ES6) using webpack.
+No framework like React/Angular is used.
 
-```
-npm run build
-```
+# Github page link
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+> https://arupkumargupta.github.io/Chess/
